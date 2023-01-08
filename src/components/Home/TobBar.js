@@ -23,6 +23,7 @@ const Tobbar = styled.div`
     letter-spacing: -0.88px;
     padding: 8px 12px;
     color: ${colors.light};
+    transition: all 0.2s;
   }
 
   button:hover {

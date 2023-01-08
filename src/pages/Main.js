@@ -5,13 +5,15 @@ import bgImg from "../assets/img/bg.jpg";
 import Project1 from "../components/projects/Project1";
 import colors from "../assets/color.js";
 import Project2 from "../components/projects/Project2";
+import Education from "../components/aboutme/Education";
+import Experience from "../components/aboutme/Experience";
 
 const MainStyle = styled.div`
   margin: -8px;
   background-color: ${colors.light};
 `;
 const Background = styled.div`
-  height: 100vh;
+  height: 100vh
   width: 100vw;
   background-color: ${colors.dark};
 `;
@@ -35,7 +37,7 @@ const Section = styled.div`
 const Title = styled.div`
   font-size: 150px;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 `;
 const ProjectDisplay = styled.div`
   display: flex;
@@ -64,6 +66,8 @@ const Main = () => {
       <section id="about-me">
         <Section>
           <Title>about me</Title>
+          <Education />
+          <Experience />
         </Section>
       </section>
     </MainStyle>
