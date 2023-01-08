@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "../../assets/color";
 
 const Tobbar = styled.div`
   display: flex;
@@ -21,10 +22,12 @@ const Tobbar = styled.div`
     cursor: pointer;
     letter-spacing: -0.88px;
     padding: 8px 12px;
+    color: ${colors.light};
   }
 
   button:hover {
-    background: rgba(255, 255, 255, 0.5);
+    color: ${colors.dark};
+    background: ${colors.light};
     border-radius: 6px;
     padding: 8px 12px;
     letter-spacing: -0.88px;

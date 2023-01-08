@@ -1,3 +1,9 @@
 div{
     justify-content:flex-end;
+    background-image: url('../assets/img/bg.jpg');
+    background-color: lig;
+    grid-template-columns: auto;
+    text-decoration: un;
+    align-items: flex-end;
+    cursor
 }
