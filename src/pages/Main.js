@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import TobBar from "../components/Home/TobBar";
-import bgImg from "../assets/img/bg.jpg";
 import Project1 from "../components/projects/Project1";
 import colors from "../assets/color.js";
 import Project2 from "../components/projects/Project2";
@@ -11,9 +10,24 @@ import Experience from "../components/aboutme/Experience";
 const MainStyle = styled.div`
   margin: -8px;
   background-color: ${colors.light};
+
+  #home {
+    display: flex;
+  }
+`;
+
+const Contact = styled.div`
+  display: flex;
+
+  .drag-box {
+    width: 40px;
+    height: 100%;
+    background-color: red;
+    float: right;
+  }
 `;
 const Background = styled.div`
-  height: 100vh
+  height: 100vh;
   width: 100vw;
   background-color: ${colors.dark};
 `;
@@ -47,9 +61,13 @@ const ProjectDisplay = styled.div`
 const Main = () => {
   return (
     <MainStyle>
+      <TobBar />
       <section id="home">
+        <Contact>
+          <div className="contact-contents">email/ git / velog</div>
+          <div className="drag-box">drag</div>
+        </Contact>
         <Background>
-          <TobBar />
           <Text>FRONTEND DEVELOPER</Text>
         </Background>
       </section>

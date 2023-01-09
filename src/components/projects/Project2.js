@@ -123,7 +123,7 @@ const Project2 = () => {
           <ul className="links">
             ✔️ 관련 링크
             <li>
-              <a href="https://www.codingfactory.net/10231">
+              <a href="https://github.com/2nd-neordnary-HACKATHON-Team4/realme-frontend">
                 Github Repository
               </a>
             </li>

@@ -125,7 +125,7 @@ const Project1 = () => {
           <ul className="links">
             ✔️ 관련 링크
             <li>
-              <a href="https://www.codingfactory.net/10231">
+              <a href="https://github.com/Feelim/feelim-web">
                 Github Repository
               </a>
             </li>

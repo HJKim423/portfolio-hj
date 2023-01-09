@@ -6,10 +6,10 @@ const Tobbar = styled.div`
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  background-color: transparent;
+  background-color: ${colors.dark};
   margin: 0px;
-  height: 100px;
-  position: fix;
+  height: 80px;
+  position: fixed;
   z-index: 1;
   margin-right: 40px;
 
@@ -36,11 +36,15 @@ const Tobbar = styled.div`
 `;
 
 const TobBar = () => {
+  function goToScroll(name) {
+    let location = document.querySelector(name).offsetTop;
+    window.scrollTo({ top: location, behavior: "smooth" });
+  }
   return (
     <Tobbar>
-      <button>home</button>
-      <button>projects</button>
-      <button>about me</button>
+      <button onClick={() => goToScroll("#home")}>home</button>
+      <button onClick={() => goToScroll("#projects")}>projects</button>
+      <button onClick={() => goToScroll("#about-me")}>about me</button>
     </Tobbar>
   );
 };
