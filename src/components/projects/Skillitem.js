@@ -1,30 +1,37 @@
 import { useState } from "react";
 import styled from "styled-components";
+import colors from "../../assets/color";
 
 const SkillItemStyle = styled.div`
   margin: 10px;
   font-size: 18px;
+  background-color: ${colors.light};
+  border-radius: 12px;
+  transition: all 0.2s;
+
+  :hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+  }
 
   .skill-name {
     padding: 10px;
     cursor: pointer;
     width: 200px;
   }
-  .skill-name:hover {
-    text-decoration: underline;
-  }
+
   .skill-content {
     font-weight: 500;
-    padding-left: 15px;
+    padding: 0 15px;
+    font-size: 14px;
+    padding-bottom: 12px;
   }
 `;
 const Skillitem = ({ title, content }) => {
   const [isHide, setIsHide] = useState(true);
   return (
-    <SkillItemStyle>
-      <div className="skill-name" onClick={() => setIsHide(!isHide)}>
-        {title}
-      </div>
+    <SkillItemStyle onClick={() => setIsHide(!isHide)}>
+      <div className="skill-name">{title}</div>
       {!isHide && <div className="skill-content">{content}</div>}
     </SkillItemStyle>
   );

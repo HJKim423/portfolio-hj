@@ -6,10 +6,12 @@ import colors from "../assets/color.js";
 import Project2 from "../components/projects/Project2";
 import Education from "../components/aboutme/Education";
 import Experience from "../components/aboutme/Experience";
+import Project3 from "../components/projects/Project3";
 
 const MainStyle = styled.div`
   margin: -8px;
   background-color: ${colors.light};
+  overflow-x: hidden;
 
   #home {
     display: flex;
@@ -38,7 +40,7 @@ const Text = styled.div`
   align-items: center;
   font-size: 200px;
   font-weight: 700;
-  height: 700px;
+  height: 3em;
   color: ${colors.light};
   text-align: center;
 `;
@@ -63,10 +65,10 @@ const Main = () => {
     <MainStyle>
       <TobBar />
       <section id="home">
-        <Contact>
+        {/* <Contact>
           <div className="contact-contents">email/ git / velog</div>
           <div className="drag-box">drag</div>
-        </Contact>
+        </Contact> */}
         <Background>
           <Text>FRONTEND DEVELOPER</Text>
         </Background>
@@ -77,7 +79,7 @@ const Main = () => {
           <ProjectDisplay>
             <Project1 />
             <Project2 />
-            <Project1 />
+            <Project3 />
           </ProjectDisplay>
         </Section>
       </section>
