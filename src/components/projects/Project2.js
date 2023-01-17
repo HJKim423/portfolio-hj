@@ -1,8 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import Skillitem from "./Skillitem";
 import realme from "../../assets/img/realme.png";
 import colors from "../../assets/color";
 
+const slideUp = keyframes`
+  from{
+    transform: translateY(200px);
+    opacity: 0
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 1
+  }
+`;
 const Item = styled.div`
   background-color: white;
   padding: 60px;
@@ -13,6 +23,16 @@ const Item = styled.div`
   margin-left: auto;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition: all 0.5s;
+
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  ${props =>
+    props.isFade &&
+    css`
+      animation-name: ${slideUp};
+    `}
+
 
   :hover{
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -96,9 +116,9 @@ const Item = styled.div`
   }
 `;
 
-const Project2 = () => {
+const Project2 = ({ isFade }) => {
   return (
-    <Item>
+    <Item isFade={isFade}>
       <div className="sub">팀 프로젝트</div>
       <div className="title">
         RealMe

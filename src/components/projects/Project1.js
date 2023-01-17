@@ -1,8 +1,18 @@
-import styled from "styled-components";
 import Skillitem from "./Skillitem";
 import chalkak from "../../assets/img/chalkak.png";
 import colors from "../../assets/color";
+import styled, { keyframes, css } from "styled-components";
 
+const slideUp = keyframes`
+from{
+  transform: translateY(200px);
+  opacity: 0
+}
+to{
+  transform: translateY(0px);
+  opacity: 1
+}
+`;
 const Item = styled.div`
   background-color: white;
   padding: 60px;
@@ -12,6 +22,15 @@ const Item = styled.div`
   width: 35vw;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition: all 0.2s;
+
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  ${props =>
+    props.isFade &&
+    css`
+      animation-name: ${slideUp};
+    `}
 
   :hover{
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -96,9 +115,9 @@ const Item = styled.div`
   }
 `;
 
-const Project1 = () => {
+const Project1 = ({ isFade }) => {
   return (
-    <Item>
+    <Item isFade={isFade}>
       <div className="sub">팀 프로젝트</div>
       <div className="title">
         Chalkak
@@ -145,7 +164,7 @@ const Project1 = () => {
               <Skillitem
                 title={"TypeScript"}
                 content={
-                  "  원활한 코드 공유를 위해 가독성이 높고 에러를 잡기 용이한 TypeScript 언어를 이용해 개발하였습니다."
+                  "  원활한 코드 공유를 위해 가독성이 좋고 타입 안정성이 높은 TypeScript 언어를 이용해 개발하였습니다."
                 }
               />
               <Skillitem

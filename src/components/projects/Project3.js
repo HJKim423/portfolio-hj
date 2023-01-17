@@ -1,7 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import Skillitem from "./Skillitem";
 import wanted from "../../assets/img/wanted.png";
 import colors from "../../assets/color";
+
+const slideUp = keyframes`
+from{
+  transform: translateY(200px);
+  opacity: 0
+}
+to{
+  transform: translateY(0px);
+  opacity: 1
+}
+`;
 
 const Item = styled.div`
   background-color: white;
@@ -12,6 +23,16 @@ const Item = styled.div`
   width: 35vw;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition: all 0.2s;
+
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  ${props =>
+    props.isFade &&
+    css`
+      animation-name: ${slideUp};
+    `}
+
 
   :hover{
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -96,9 +117,9 @@ const Item = styled.div`
   }
 `;
 
-const Project3 = () => {
+const Project3 = ({ isFade }) => {
   return (
-    <Item>
+    <Item isFade={isFade}>
       <div className="sub">팀 프로젝트</div>
       <div className="title">
         Wanted Clone

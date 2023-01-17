@@ -82,30 +82,30 @@ const Experience = () => {
     <>
       <SubTitle>experience</SubTitle>
       <Container>
-        <div class="lines">
-          <div class="dot"></div>
-          <div class="line"></div>
-          <div class="dot"></div>
-          <div class="line"></div>
-          <div class="dot"></div>
-          <div class="line"></div>
-          <div class="dot"></div>
+        <div className="lines">
+          <div className="dot"></div>
+          <div className="line"></div>
+          <div className="dot"></div>
+          <div className="line"></div>
+          <div className="dot"></div>
+          <div className="line"></div>
+          <div className="dot"></div>
         </div>
 
-        <div class="cards">
-          <div class="card">
+        <div className="cards">
+          <div className="card">
             <h4>2022.09 ~ 2022.11</h4>
             <p>연합동아리 CMC Web 파트 수료</p>
           </div>
-          <div class="card mid">
+          <div className="card mid">
             <h4>2022.09 .24</h4>
             <p>Neordnary HACATHON 수상</p>
           </div>
-          <div class="card">
+          <div className="card">
             <h4>14:15</h4>
             <p>Break Through Self Doubt And Fear</p>
           </div>
-          <div class="card">
+          <div className="card">
             <h4>14:15</h4>
             <p>Break Through Self Doubt And Fear</p>
           </div>
