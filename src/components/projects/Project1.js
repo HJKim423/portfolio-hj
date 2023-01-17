@@ -22,8 +22,9 @@ const Item = styled.div`
   width: 35vw;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition: all 0.2s;
+  opacity: 0;
 
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
   ${props =>

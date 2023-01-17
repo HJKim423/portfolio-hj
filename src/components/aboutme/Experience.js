@@ -77,7 +77,7 @@ margin-top: 70px;
 
 `;
 
-const Experience = () => {
+const Experience = ({ yOffset }) => {
   return (
     <>
       <SubTitle>experience</SubTitle>
@@ -86,29 +86,39 @@ const Experience = () => {
           <div className="dot"></div>
           <div className="line"></div>
           <div className="dot"></div>
-          <div className="line"></div>
+          {/* <div className="line"></div>
           <div className="dot"></div>
           <div className="line"></div>
-          <div className="dot"></div>
+          <div className="dot"></div> */}
         </div>
 
         <div className="cards">
-          <div className="card">
+          <div
+            className="card"
+            style={{
+              transform: `translateX(${(5440 - yOffset) / 2}px)`,
+            }}
+          >
             <h4>2022.09 ~ 2022.11</h4>
             <p>연합동아리 CMC Web 파트 수료</p>
           </div>
-          <div className="card mid">
+          <div
+            className="card mid"
+            style={{
+              transform: `translateX(${5440 - yOffset}px)`,
+            }}
+          >
             <h4>2022.09 .24</h4>
             <p>Neordnary HACATHON 수상</p>
           </div>
-          <div className="card">
+          {/* <div className="card">
             <h4>14:15</h4>
             <p>Break Through Self Doubt And Fear</p>
           </div>
           <div className="card">
             <h4>14:15</h4>
             <p>Break Through Self Doubt And Fear</p>
-          </div>
+          </div> */}
         </div>
       </Container>
     </>

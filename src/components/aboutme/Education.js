@@ -77,7 +77,7 @@ margin-top: 70px;
 
 `;
 
-const Education = () => {
+const Education = ({ yOffset }) => {
   return (
     <>
       <SubTitle>education</SubTitle>
@@ -86,29 +86,39 @@ const Education = () => {
           <div className="dot"></div>
           <div className="line"></div>
           <div className="dot"></div>
-          <div className="line"></div>
+          {/* <div className="line"></div>
           <div className="dot"></div>
           <div className="line"></div>
-          <div className="dot"></div>
+          <div className="dot"></div> */}
         </div>
 
         <div className="cards">
-          <div className="card">
+          <div
+            className="card"
+            style={{
+              transform: `translateX(${(5440 - yOffset) / 12}px)`,
+            }}
+          >
             <h4>2019.03 ~</h4>
             <p>가톨릭대학교 공간디자인소비자학과 / 컴퓨터정보공학부</p>
           </div>
-          <div className="card mid">
+          <div
+            className="card mid"
+            style={{
+              transform: `translateX(${(5440 - yOffset) / 4}px)`,
+            }}
+          >
             <h4>2022.03 ~ 2022.05</h4>
             <p>컴공선배 라이징캠프 Web 과정 수료</p>
           </div>
-          <div className="card">
+          {/* <div className="card">
             <h4>14:15</h4>
             <p>Break Through Self Doubt And Fear</p>
           </div>
           <div className="card">
             <h4>14:15</h4>
             <p>Break Through Self Doubt And Fear</p>
-          </div>
+          </div> */}
         </div>
       </Container>
     </>

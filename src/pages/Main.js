@@ -53,7 +53,7 @@ const Main = () => {
     <MainStyle scroll={yOffset}>
       <TobBar />
       <section id="home">
-        <Background>
+        <Background style={{ backgroundPositionY: yOffset / 2 }}>
           <Text>FRONTEND DEVELOPER</Text>
         </Background>
       </section>
@@ -73,8 +73,8 @@ const Main = () => {
         <Section>
           <section className="scroll-section" id="scroll-section-2">
             <Title>about me</Title>
-            <Education />
-            <Experience />
+            <Education yOffset={yOffset} />
+            <Experience yOffset={yOffset} />
           </section>
         </Section>
       </section>
