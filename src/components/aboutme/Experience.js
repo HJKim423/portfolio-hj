@@ -96,7 +96,7 @@ const Experience = ({ yOffset }) => {
           <div
             className="card"
             style={{
-              transform: `translateX(${(5440 - yOffset) / 2}px)`,
+              transform: `translateX(${(6387 - yOffset) / 2}px)`,
             }}
           >
             <h4>2022.09 ~ 2022.11</h4>
@@ -105,7 +105,7 @@ const Experience = ({ yOffset }) => {
           <div
             className="card mid"
             style={{
-              transform: `translateX(${5440 - yOffset}px)`,
+              transform: `translateX(${6387 - yOffset}px)`,
             }}
           >
             <h4>2022.09 .24</h4>

@@ -7,6 +7,7 @@ import Project2 from "../components/projects/Project2";
 import Education from "../components/aboutme/Education";
 import Experience from "../components/aboutme/Experience";
 import Project3 from "../components/projects/Project3";
+import bgImg from "../assets/img/back.jpg";
 
 const Main = () => {
   const [currentScene, setCurrentScene] = useState(0);
@@ -16,16 +17,16 @@ const Main = () => {
   const [isFade3, setIsFade3] = useState(false);
 
   useEffect(() => {
-    if (yOffset > 400) {
+    if (yOffset > 1300) {
       setIsFade1(true);
     }
-    if (yOffset > 1800) {
+    if (yOffset > 2700) {
       setIsFade2(true);
     }
-    if (yOffset > 3100) {
+    if (yOffset > 4000) {
       setIsFade3(true);
     }
-    if (yOffset < 400) {
+    if (yOffset < 1300) {
       setIsFade1(false);
       setIsFade2(false);
       setIsFade3(false);
@@ -115,33 +116,11 @@ const MainStyle = styled.div`
 
 const Background = styled.div`
   width: 100vw;
-  height: 100vh;
-  background-color: ${colors.dark};
+  height: 200vh;
+  // background-color: ${colors.dark};
+  background-image: url(${bgImg});
+  background-size: cover;
 
-  #scroll-section-0 h1 {
-    font-size: 9vw;
-    text-align: center;
-  }
-  .sticky-elem {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .main-massage {
-    align-items: center;
-    justify-content: center;
-    margin: 5px 0;
-    height: 3em;
-    font-size: 4vw;
-
-    p {
-      font-weight: bold;
-      text-align: center;
-      line-height: 1.2;
-    }
   }
 `;
 
@@ -152,8 +131,9 @@ const Text = styled.div`
   font-size: 200px;
   font-weight: 700;
   height: 3em;
-  color: ${colors.light};
+  color: ${colors.dark};
   text-align: center;
+  padding-top: 180px;
 `;
 
 const Section = styled.div`
