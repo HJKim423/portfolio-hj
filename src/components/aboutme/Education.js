@@ -77,7 +77,8 @@ margin-top: 70px;
 
 `;
 
-const Education = ({ yOffset }) => {
+const Education = ({ yOffset, totalHeight }) => {
+  console.log(yOffset - (window.outerHeight - window.innerHeight), totalHeight);
   return (
     <>
       <SubTitle>education</SubTitle>
@@ -95,19 +96,18 @@ const Education = ({ yOffset }) => {
         <div className="cards">
           <div
             className="card"
-            style={{
-              transform: `translateX(${(6287 - yOffset) / 12}px)`,
-            }}
+            // style={{
+            //   transform: `translateX(${
+            //     (totalHeight -
+            //       (yOffset - (window.outerHeight - window.innerHeight))) /
+            //     12
+            //   }px)`,
+            // }}
           >
             <h4>2019.03 ~</h4>
             <p>가톨릭대학교 공간디자인소비자학과 / 컴퓨터정보공학부</p>
           </div>
-          <div
-            className="card mid"
-            style={{
-              transform: `translateX(${(6287 - yOffset) / 4}px)`,
-            }}
-          >
+          <div className="card mid">
             <h4>2022.03 ~ 2022.05</h4>
             <p>컴공선배 라이징캠프 Web 과정 수료</p>
           </div>

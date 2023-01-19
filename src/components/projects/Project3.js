@@ -136,7 +136,7 @@ const Project3 = ({ isFade }) => {
           <div className="role">
             ✔️ 12페이지 구현, 자동 로그인, 로그아웃, 이력서 작성 기능 구현
           </div>
-          {/* <div className="acc">✔️ Google Play Store, App Store에 출시 완료</div> */}
+
           <ul className="links">
             ✔️ 관련 링크
             <li>
@@ -145,7 +145,9 @@ const Project3 = ({ isFade }) => {
               </a>
             </li>
             <li>
-              <a href="https://github.com/mock-rp5/wanted_web_jay">구현 영상</a>
+              <a href="https://drive.google.com/file/d/1tSMbhpdstEpcXeb2a3AIYNhED7R9sapm/view?usp=share_link">
+                구현 영상
+              </a>
             </li>
           </ul>
           <div className="skills">

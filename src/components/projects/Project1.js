@@ -150,7 +150,14 @@ const Project1 = ({ isFade }) => {
               </a>
             </li>
             <li>
-              <a href="https://www.codingfactory.net/10231">App Store</a>
+              <a href="https://apps.apple.com/cn/app/chalkak/id6444452971">
+                App Store
+              </a>
+            </li>
+            <li>
+              <a href="https://play.google.com/store/apps/details?id=com.chalkak">
+                Google Play Store
+              </a>
             </li>
           </ul>
           <div className="skills">

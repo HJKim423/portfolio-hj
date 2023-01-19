@@ -77,7 +77,7 @@ margin-top: 70px;
 
 `;
 
-const Experience = ({ yOffset }) => {
+const Experience = ({ yOffset, totalHeight }) => {
   return (
     <>
       <SubTitle>experience</SubTitle>
@@ -93,21 +93,11 @@ const Experience = ({ yOffset }) => {
         </div>
 
         <div className="cards">
-          <div
-            className="card"
-            style={{
-              transform: `translateX(${(6287 - yOffset) / 2}px)`,
-            }}
-          >
+          <div className="card">
             <h4>2022.09 ~ 2022.11</h4>
             <p>연합동아리 CMC Web 파트 수료</p>
           </div>
-          <div
-            className="card mid"
-            style={{
-              transform: `translateX(${6287 - yOffset}px)`,
-            }}
-          >
+          <div className="card mid">
             <h4>2022.09 .24</h4>
             <p>Neordnary HACATHON 수상</p>
           </div>

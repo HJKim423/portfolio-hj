@@ -120,7 +120,7 @@ const TextSection = () => {
   useEffect(() => {
     if (startX > endX) {
       setXOffset(1200);
-    } else {
+    } else if (startX < endX) {
       setXOffset(0);
     }
   }, [xOffset]);
@@ -138,7 +138,11 @@ const TextSection = () => {
         >
           <div className="front-section">
             <div className="front-text">FRONTEND DEVELOPER</div>
-            <img className="arrow" src={arrow} />
+            <img
+              className="arrow"
+              src={arrow}
+              onClick={() => setXOffset(1200)}
+            />
           </div>
 
           <div className="back-section">
@@ -157,9 +161,13 @@ const TextSection = () => {
               </span>
             </div>
             <div className="back-text">
-              <span>ghwjdgz@gmail.com</span>
+              <span>pknojlh27@naver.com</span>
             </div>
-            <img className="arrow back" src={arrow} />
+            <img
+              className="arrow back"
+              src={arrow}
+              onClick={() => setXOffset(0)}
+            />
           </div>
         </div>
       </div>

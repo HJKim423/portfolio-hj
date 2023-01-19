@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 import TobBar from "../components/Home/TobBar";
 import Project1 from "../components/projects/Project1";
@@ -15,6 +15,12 @@ const Main = () => {
   const [isFade1, setIsFade1] = useState(false);
   const [isFade2, setIsFade2] = useState(false);
   const [isFade3, setIsFade3] = useState(false);
+  const mainRef = useRef();
+  const [totalHeight, setTotalHeight] = useState(0);
+
+  useEffect(() => {
+    setTotalHeight(mainRef.current.clientHeight);
+  }, []);
 
   useEffect(() => {
     if (yOffset > 1300) {
@@ -31,8 +37,6 @@ const Main = () => {
       setIsFade2(false);
       setIsFade3(false);
     }
-
-    console.log(yOffset, isFade1);
   }, [yOffset]);
 
   const handleScroll = () => {
@@ -51,7 +55,7 @@ const Main = () => {
   }, []);
 
   return (
-    <MainStyle scroll={yOffset}>
+    <MainStyle scroll={yOffset} ref={mainRef}>
       <TobBar />
       <section id="home">
         <Background style={{ backgroundPositionY: yOffset / 2 }}>
@@ -74,8 +78,8 @@ const Main = () => {
         <Section>
           <section className="scroll-section" id="scroll-section-2">
             <Title>about me</Title>
-            <Education yOffset={yOffset} />
-            <Experience yOffset={yOffset} />
+            <Education yOffset={yOffset} totalHeight={totalHeight} />
+            <Experience yOffset={yOffset} totalHeight={totalHeight} />
           </section>
         </Section>
       </section>
