@@ -144,12 +144,16 @@ const TextSection = () => {
           <div className="back-section">
             <div className="back-text">
               <span>
-                <a href="https://github.com/HJKim423">Github.</a>
+                <a href="https://github.com/HJKim423" target="_blank">
+                  Github.
+                </a>
               </span>
             </div>
             <div className="back-text">
               <span>
-                <a href="https://velog.io/@pknojlh27">Velog.</a>
+                <a href="https://velog.io/@pknojlh27" target="_blank">
+                  Velog.
+                </a>
               </span>
             </div>
             <div className="back-text">
