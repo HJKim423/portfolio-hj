@@ -96,7 +96,7 @@ const Education = ({ yOffset }) => {
           <div
             className="card"
             style={{
-              transform: `translateX(${(6387 - yOffset) / 12}px)`,
+              transform: `translateX(${(6287 - yOffset) / 12}px)`,
             }}
           >
             <h4>2019.03 ~</h4>
@@ -105,7 +105,7 @@ const Education = ({ yOffset }) => {
           <div
             className="card mid"
             style={{
-              transform: `translateX(${(6387 - yOffset) / 4}px)`,
+              transform: `translateX(${(6287 - yOffset) / 4}px)`,
             }}
           >
             <h4>2022.03 ~ 2022.05</h4>

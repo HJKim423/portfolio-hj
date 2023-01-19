@@ -8,9 +8,9 @@ import Education from "../components/aboutme/Education";
 import Experience from "../components/aboutme/Experience";
 import Project3 from "../components/projects/Project3";
 import bgImg from "../assets/img/back.jpg";
+import TextSection from "../components/Home/TextSection";
 
 const Main = () => {
-  const [currentScene, setCurrentScene] = useState(0);
   const [yOffset, setYOffset] = useState(0);
   const [isFade1, setIsFade1] = useState(false);
   const [isFade2, setIsFade2] = useState(false);
@@ -55,7 +55,7 @@ const Main = () => {
       <TobBar />
       <section id="home">
         <Background style={{ backgroundPositionY: yOffset / 2 }}>
-          <Text>FRONTEND DEVELOPER</Text>
+          <TextSection />
         </Background>
       </section>
       <section id="projects">
@@ -117,23 +117,9 @@ const MainStyle = styled.div`
 const Background = styled.div`
   width: 100vw;
   height: 200vh;
-  // background-color: ${colors.dark};
   background-image: url(${bgImg});
   background-size: cover;
-
   }
-`;
-
-const Text = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 200px;
-  font-weight: 700;
-  height: 3em;
-  color: ${colors.dark};
-  text-align: center;
-  padding-top: 180px;
 `;
 
 const Section = styled.div`
