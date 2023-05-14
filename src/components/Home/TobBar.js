@@ -14,7 +14,7 @@ const Tobbar = styled.div`
   margin-right: 40px;
 
   button {
-    font-size: 28px;
+    font-size: 2vw;
     font-weight: bold;
     margin-right: 15px;
     background: none;

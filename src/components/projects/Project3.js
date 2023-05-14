@@ -1,122 +1,15 @@
-import styled, { keyframes, css } from "styled-components";
 import Skillitem from "./Skillitem";
 import wanted from "../../assets/img/wanted.png";
-import colors from "../../assets/color";
+import wanted1 from "../../assets/img/wanted1.png";
+import wanted2 from "../../assets/img/wanted2.png";
+import wanted3 from "../../assets/img/wanted3.png";
+import wanted4 from "../../assets/img/wanted4.png";
+import wanted5 from "../../assets/img/wanted5.png";
+import wanted6 from "../../assets/img/wanted6.png";
 
-const slideUp = keyframes`
-from{
-  transform: translateY(200px);
-  opacity: 0
-}
-to{
-  transform: translateY(0px);
-  opacity: 1
-}
-`;
-
-const Item = styled.div`
-  background-color: white;
-  padding: 60px;
-  margin: 50px 20px;
-  border-radius: 12px;
-  color: ${colors.dark};
-  width: 35vw;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  transition: all 0.2s;
-  opacity: 0;
-  
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  ${props =>
-    props.isFade &&
-    css`
-      animation-name: ${slideUp};
-    `}
-
-
-  :hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
-
-  .sub {
-    color: gray;
-    font-size: 25px;
-    font-weight: 700;
-  }
-  .title {
-    font-size: 40px;
-    font-weight: 700;
-    margin: 10px 0;
-    display: flex;
-    align-items: flex-end;
-
-    .period {
-      font-size: 18px;
-      margin-left: 15px;
-      margin-bottom: 6px;
-      font-weight: 500;
-    }
-  }
-  .item-img {
-    margin: 15px 0;
-    img {
-      width: 35vw;
-      border-radius: 8px;
-      object-fit: fit;
-    }
-  }
-  .contents {
-    .introduction {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-    .subscription {
-      font-size: 16px;
-      margin: 0 10px;
-      font-weight: 700;
-
-      .team,
-      .role,
-      .acc {
-        margin-right: 20px;
-        line-height: 30px;
-        margin-bottom: 5px;
-      }
-
-      .links {
-        padding-left: 0;
-
-        li {
-          list-style: none;
-          margin: 5px 0 5px 30px;
-          margin-bottom: 10px;
-
-          a {
-            font-weight: 700;
-            padding: 5px;
-            color: ${colors.dark};
-           
-            text-decoration: none;
-          }
-          a:hover {
-            background-color: ${colors.light};
-            color: ${colors.dark}
-            padding: 2px 5px;
-            font-weight: 700;
-            border-radius: 6px;
-          }
-        }
-      }
-    }
-  }
-
-  .skills {
-    font-size: 18px;
-    font-weight: 700;
-  }
-`;
+import { Item } from "./Project1";
+import Slider from "react-slick";
+import { settings, SliderStyle } from "./Project4";
 
 const Project3 = ({ isFade }) => {
   return (
@@ -126,15 +19,42 @@ const Project3 = ({ isFade }) => {
         Wanted Clone
         <div className="period">2022.05.21 ~ 2022.06.02</div>
       </div>
-      <div className="item-img">
-        <img src={wanted} />
-      </div>
+      <SliderStyle>
+        <Slider {...settings}>
+          <div>
+            <img src={wanted} alt="wanted" />
+          </div>
+          <div>
+            <img src={wanted1} alt="wanted" />
+          </div>
+          <div>
+            <img src={wanted2} alt="wanted" />
+          </div>
+          <div>
+            <img src={wanted3} alt="wanted" />
+          </div>
+          <div>
+            <img src={wanted4} alt="wanted" />
+          </div>
+          <div>
+            <img src={wanted5} alt="wanted" />
+          </div>
+          <div>
+            <img src={wanted6} alt="wanted" />
+          </div>
+        </Slider>
+      </SliderStyle>
+
       <div className="contents">
         <div className="subscription">
           <div className="introduction">원티드 웹사이트 클론 코딩</div>
           <div className="team">✔️ 백엔드 개발자 1, 프론트엔드 개발자 1</div>
           <div className="role">
-            ✔️ 12페이지 구현, 자동 로그인, 로그아웃, 이력서 작성 기능 구현
+            ✔️ 서비스 내 구현 기능
+            <li>
+              12페이지 구현, 자동 로그인, 로그아웃, 이력서 작성 기능, 좋아요
+              기능 구현
+            </li>
           </div>
 
           <ul className="links">

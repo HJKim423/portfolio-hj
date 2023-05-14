@@ -14,7 +14,7 @@ const TextSecionStyle = styled.div`
   height: 100vh;
 
   .scroll-container {
-    width: 1200px;
+    width: 200vw;
     margin: 0 auto;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -29,7 +29,7 @@ const TextSecionStyle = styled.div`
     justify-content: center;
     align-items: center;
     height: 600px;
-    width: 2400px;
+    width: 200vw;
     transform: translateX(-${props => props.xOffset}px);
     transition: all 0.35s ease-in-out;
   }
@@ -45,10 +45,11 @@ const TextSecionStyle = styled.div`
   }
 
   .front-section {
-    margin-top: 50px;
+    margin-top: 0.1vh;
+    width: 100vw;
   }
   .front-text {
-    font-size: 200px;
+    font-size: 12vw;
     font-weight: 700;
     color: ${colors.dark};
     text-align: center;
@@ -56,13 +57,12 @@ const TextSecionStyle = styled.div`
   }
 
   .back-section {
-    width: 100%;
-    font-size: 50px;
+    width: 100vw;
+    font-size: 4vw;
     text-align: center;
     font-weight: 700;
     color: ${colors.dark};
-    margin-top: 100px;
-
+    margin-top: 0.1vh;
     .back-text {
       margin: 10px 0;
       span {
@@ -97,6 +97,8 @@ const TextSection = () => {
   const [startX, setStartX] = useState(0);
   const [endX, setEndX] = useState(0);
   const [xOffset, setXOffset] = useState(0);
+  const pageWidth = window.innerWidth;
+  console.log(pageWidth, startX);
 
   const onDragStart = e => {
     e.preventDefault();
@@ -113,13 +115,12 @@ const TextSection = () => {
   const onDragMove = e => {
     if (isDrag) {
       setXOffset(startX - e.pageX);
-      console.log(startX - endX);
     }
   };
 
   useEffect(() => {
     if (startX > endX) {
-      setXOffset(1200);
+      setXOffset(pageWidth);
     } else if (startX < endX) {
       setXOffset(0);
     }
@@ -141,7 +142,7 @@ const TextSection = () => {
             <img
               className="arrow"
               src={arrow}
-              onClick={() => setXOffset(1200)}
+              onClick={() => setXOffset(pageWidth)}
             />
           </div>
 

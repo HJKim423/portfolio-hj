@@ -1,11 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
-import colors from "../../assets/color";
 
 const SkillItemStyle = styled.div`
   margin: 10px;
   font-size: 18px;
-  background-color: ${colors.light};
+  background-color: lightgray;
   border-radius: 12px;
   transition: all 0.2s;
 

@@ -1,121 +1,6 @@
-import styled, { keyframes, css } from "styled-components";
 import Skillitem from "./Skillitem";
 import realme from "../../assets/img/realme.png";
-import colors from "../../assets/color";
-
-const slideUp = keyframes`
-  from{
-    transform: translateY(200px);
-    opacity: 0
-  }
-  to{
-    transform: translateY(0px);
-    opacity: 1
-  }
-`;
-const Item = styled.div`
-  background-color: white;
-  padding: 60px;
-  margin: 50px 120px;
-  border-radius: 12px;
-  color: ${colors.dark};
-  width: 35vw;
-  margin-left: auto;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  transition: all 0.5s;
-  opacity: 0;
-  
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  ${props =>
-    props.isFade &&
-    css`
-      animation-name: ${slideUp};
-    `}
-
-
-  :hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
-  .sub {
-    color: gray;
-    font-size: 25px;
-    font-weight: 700;
-  }
-  .title {
-    font-size: 40px;
-    font-weight: 700;
-    margin: 10px 0;
-    display: flex;
-    align-items: flex-end;
-
-    .period {
-      font-size: 18px;
-      margin-left: 15px;
-      margin-bottom: 6px;
-      font-weight: 500;
-    }
-  }
-  .item-img {
-    margin: 15px 0;
-    img {
-      width: 35vw;
-      border-radius: 8px;
-      object-fit: fit;
-    }
-  }
-  .contents {
-    .introduction {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-    .subscription {
-      font-size: 16px;
-      margin: 0 10px;
-      font-weight: 700;
-
-      .team,
-      .role,
-      .acc {
-        margin-right: 20px;
-        line-height: 30px;
-        margin-bottom: 5px;
-      }
-
-      .links {
-        padding-left: 0;
-
-        li {
-          list-style: none;
-          margin: 5px 0 5px 30px;
-          margin-bottom: 10px;
-
-          a {
-            font-weight: 700;
-            padding: 5px;
-            color: ${colors.dark};
-           
-            text-decoration: none;
-          }
-          a:hover {
-            background-color: ${colors.light};
-            color: ${colors.dark}
-            padding: 2px 5px;
-            font-weight: 700;
-            border-radius: 6px;
-          }
-        }
-      }
-    }
-  }
-
-  .skills {
-    font-size: 18px;
-    font-weight: 700;
-  }
-`;
+import { Item } from "./Project1";
 
 const Project2 = ({ isFade }) => {
   return (
@@ -126,7 +11,7 @@ const Project2 = ({ isFade }) => {
         <div className="period">2022.09.24 (해커톤 프로젝트)</div>
       </div>
       <div className="item-img">
-        <img src={realme} />
+        <img src={realme} alt="realme" />
       </div>
       <div className="contents">
         <div className="subscription">
@@ -137,7 +22,8 @@ const Project2 = ({ isFade }) => {
             ✔️ TEAM : 기획자 1, 디자이너 1, 백엔드 개발자 4, 프론트엔드 개발자 3
           </div>
           <div className="role">
-            ✔️ 스플래시 화면, 로그인 화면, 회원가입 화면 구현
+            ✔️ 서비스 내 구현 기능
+            <li>스플래시 화면, 로그인 화면, 회원가입 화면 구현</li>
           </div>
           <div className="acc">✔️ Ne(o)rdinary 2기 해커톤 2등 수상</div>
           <ul className="links">

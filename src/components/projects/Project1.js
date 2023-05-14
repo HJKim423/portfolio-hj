@@ -1,7 +1,11 @@
 import Skillitem from "./Skillitem";
 import chalkak from "../../assets/img/chalkak.png";
+import ck1 from "../../assets/img/ck1.png";
+import ck2 from "../../assets/img/ck2.png";
 import colors from "../../assets/color";
 import styled, { keyframes, css } from "styled-components";
+import { settings, SliderStyle } from "./Project4";
+import Slider from "react-slick";
 
 const slideUp = keyframes`
 from{
@@ -13,13 +17,16 @@ to{
   opacity: 1
 }
 `;
-const Item = styled.div`
-  background-color: white;
+
+export const Item = styled.div`
+
+
+  background-color: #e2e2e2;
   padding: 60px;
   margin: 50px 20px;
   border-radius: 12px;
   color: ${colors.dark};
-  width: 35vw;
+  width: 575px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition: all 0.2s;
   opacity: 0;
@@ -42,6 +49,7 @@ const Item = styled.div`
     font-size: 25px;
     font-weight: 700;
   }
+
   .title {
     font-size: 40px;
     font-weight: 700;
@@ -52,21 +60,25 @@ const Item = styled.div`
     .period {
       font-size: 18px;
       margin-left: 15px;
-      margin-bottom: 6px;
+      // margin-bottom: 6px;
       font-weight: 500;
+      display:flex;
+      align-items: flex-end;
+      height: 40px;
     }
   }
+
   .item-img {
     margin: 15px 0;
     img {
-      width: 35vw;
+      width: 500px;
       border-radius: 8px;
       object-fit: fit;
     }
   }
   .contents {
     .introduction {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
       margin-bottom: 15px;
     }
@@ -76,14 +88,17 @@ const Item = styled.div`
       font-weight: 700;
 
       .team,
-      .role,
       .acc {
         margin-right: 20px;
         line-height: 30px;
         margin-bottom: 5px;
       }
+      .role {
+        padding-left: 0;
+      }
 
-      .links {
+      .links
+      {
         padding-left: 0;
 
         li {
@@ -96,7 +111,7 @@ const Item = styled.div`
             padding: 5px;
             color: ${colors.dark};
            
-            text-decoration: none;
+            text-decoration: underline;
           }
           a:hover {
             background-color: ${colors.light};
@@ -114,6 +129,40 @@ const Item = styled.div`
     font-size: 18px;
     font-weight: 700;
   }
+
+  @media screen and (max-width: 1020px) {
+    width: 55vw;
+    margin: 50px auto;
+  
+    .sub {
+      font-size: 2vw;
+    }
+    .title{
+      font-size:3vw;
+
+      .period{
+        font-size:1.5vw;
+      }
+    }
+
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    width: 400px;
+  margin: 50px auto;
+
+  .sub {
+    font-size: 16px;
+  }
+  .title{
+    font-size:24px;
+
+    .period{
+      font-size:12px;
+    }
+  }
+  
 `;
 
 const Project1 = ({ isFade }) => {
@@ -124,9 +173,20 @@ const Project1 = ({ isFade }) => {
         Chalkak
         <div className="period">2022.09 ~ 2022.11</div>
       </div>
-      <div className="item-img">
-        <img src={chalkak} />
-      </div>
+      <SliderStyle>
+        <Slider {...settings}>
+          <div>
+            <img src={chalkak} alt="chalkak" />
+          </div>
+          <div>
+            <img src={ck1} alt="chalkak" />
+          </div>
+          <div>
+            <img src={ck2} alt="chalkak" />
+          </div>
+        </Slider>
+      </SliderStyle>
+
       <div className="contents">
         <div className="subscription">
           <div className="introduction">
@@ -137,9 +197,12 @@ const Project1 = ({ isFade }) => {
             ✔️ 기획자 1, 디자이너 1, 백엔드 개발자 1, 프론트엔드 개발자 2
           </div>
           <div className="role">
-            ✔️ 카카오 로그인, 가입 화면,앱 접근, 홈 화면, 커뮤니티 화면(글 작성,
-            수정, 삭제, 댓글 작성, 수정, 삭제, 키워드 검색, 신고 기능)구현,
-            Google Play Store 배포
+            ✔️ 서비스 구현 기능
+            <li>
+              카카오 로그인, 가입 화면,앱 접근, 홈 화면, 커뮤니티 화면(글 작성,
+              수정, 삭제, 댓글 작성, 수정, 삭제, 키워드 검색, 신고 기능)구현,
+              Google Play Store 배포
+            </li>
           </div>
           <div className="acc">✔️ Google Play Store, App Store에 출시 완료</div>
           <ul className="links">

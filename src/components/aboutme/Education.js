@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import colors from "../../assets/color";
 
-const SubTitle = styled.div`
-  font-size: 80px;
+export const SubTitle = styled.div`
+  font-size: 5vw;
   font-weight: 700;
   margin-bottom: 20px;
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
 // width:100%;
 display:flex;
 margin-top: 70px;
@@ -39,8 +39,8 @@ margin-top: 70px;
 
   .card{
     width:650px;
-    height:93px;
-    padding:10px 0 25px 0;
+    // height:93px;
+    padding:10px 25px 25px 10px;
     background: ${colors.dark};
     border-radius: 10px;
     box-shadow: 0px 16px 15px -10px rgba(105, 96, 215, 0.0944602);
@@ -75,10 +75,33 @@ margin-top: 70px;
 
 }
 
+@media screen and (max-width: 1020px) {
+
+  .cards{
+    .card{
+      width: 60vw;
+      
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .cards{
+    .card{
+      width: 420px;
+      
+    }
+
+  }
+
+}
+
 `;
 
 const Education = ({ yOffset, totalHeight }) => {
-  console.log(yOffset - (window.outerHeight - window.innerHeight), totalHeight);
   return (
     <>
       <SubTitle>education</SubTitle>
