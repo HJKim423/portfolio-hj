@@ -189,11 +189,6 @@ const Project4 = ({ isFade }) => {
           <ul className="links">
             ✔️ 관련 링크
             <li>
-              <a href="https://apps.apple.com/cn/app/chalkak/id6444452971">
-                App Store
-              </a>
-            </li>
-            <li>
               <a href="https://play.google.com/store/search?q=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%20%ED%85%8C%EC%9D%BC%EB%9F%AC&c=apps&hl=ko&gl=KR">
                 Google Play Store
               </a>
